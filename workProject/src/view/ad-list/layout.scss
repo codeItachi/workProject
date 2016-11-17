@@ -1,0 +1,149 @@
+.slide-group
+{
+    height:79px;
+    border-bottom:1px solid #ccc;
+}
+.submenu
+{
+    width:auto;
+    float:right;
+    height:78px;
+    li
+    {
+        width:78px;
+        height:78px;
+        float:left;
+        color:#fff;
+        font-size:16px;
+        line-height:80px;
+        text-align:center;
+        background-color:#fff;
+    }
+
+    &.menuStyle
+    {
+        li.li-1
+        {
+            background-color: #7fc226;
+        }
+        li.li-2
+        {
+            background-color: #ff9e02;
+        }
+        li.li-3
+        {
+            background-color: #ff3b32;
+        }
+    }
+}
+
+.info-con
+{
+    height:78px;
+    background-color:#fff;
+
+    &.ck
+    {
+       >div
+       {
+            background-color:#f8f8f8;
+         >div
+         {
+            background-color:#f8f8f8;
+         }
+       }
+    }
+    >div
+    {
+        position:relative;
+        width:100%;
+        height:78px;
+        display:block;
+        padding-left:100px;
+    }
+    img
+    {
+        width:46px;
+        height:46px;
+    }
+    .left
+    {
+        position:absolute;
+        padding:16px 10px;
+        font-size:0;
+        left:0;
+        top:0;
+        >div
+        {
+            display:inline-block;
+            vertical-align:top;
+            position:relative;
+        }
+
+        .checkboxicon{
+            margin-top:13px;
+            margin-right:8px;
+        }
+
+        .s2
+        {
+
+        }
+        .s1
+        {
+            position:absolute;
+            display:block;
+            right:-10px;
+            top:-10px;
+            width:22px;
+            height:22px;
+            line-height:22px;
+            font-size:12px;
+            text-align:center;
+            border-radius:50%;
+            color:#fff;
+            overflow:hidden;
+            background-color:#00bdbf;
+        }
+    }
+    .right
+    {
+        width:100%;
+        height:78px;
+        overflow: hidden;
+        background-color:#fff;
+        padding:5px 12px 5px 0;
+
+        li
+        {
+            &:first-child{
+                font-size:15px;
+                line-height:24px;
+
+                span:first-child
+                {
+                    color:#666;
+                }
+
+                span:first-child +span
+                {
+                    color:#999;
+                    float:right;
+                    padding-right:2px;
+                    font-size:12px;
+                }
+            }
+            &:first-child + li{
+                color:#999;
+                max-height:44px;
+                line-height:22px;
+                overflow:hidden;
+                font-size:14px;
+            }
+        }
+    }
+}
+.modal.prompt
+{
+    display:block;
+}

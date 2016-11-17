@@ -1,0 +1,95 @@
+@import "../ad-list/layout.scss";
+
+.info-con.history
+{
+    >div
+    {
+        padding-left:72px;
+    }
+
+    .right
+    {
+        position:relative;
+        li:first-child + li
+        {
+            padding-right:80px;
+            font-size:14px;
+        }
+
+        >span
+        {
+            position:absolute;
+            right:10px;
+            bottom:10px;
+            font-size:12px;
+            color:#999;
+        }
+
+        li:first-child
+        {
+            span:first-child + span
+            {
+                margin-top:2px;
+                display:block;
+                float:right;
+                width:auto;
+                height:20px;
+                padding:0 4px;
+                border:1px solid #ddd;
+                font-size:12px;
+                color:#999;
+                border-radius:2px;
+                line-height:18px;
+                background-color:#f1f1f1;
+
+                //成功
+                &.suc
+                {
+                    color:#fff;
+                    border-color:#77c412;
+                    background: -webkit-linear-gradient(#a2d75a, #72ba12);
+                }
+                &.wait
+                {
+                    color:#999;
+                    border-color:#ccc;
+                    background: -webkit-linear-gradient(#f0f0f0, #e2e2e2);
+                }
+                &.while
+                {
+                    color:#fff;
+                    border-color:#70bcfe;
+                    background: -webkit-linear-gradient(#92ccfd, #67b9ff);
+                }
+                &.timeout
+                {
+                    color:#fff;
+                    border-color:#f68426;
+                    background: -webkit-linear-gradient(#f49e57, #f68426);
+                }
+                &.fail
+                {
+                    color:#fff;
+                    border-color:#cc0e1b;
+                    background: -webkit-linear-gradient(#f64753, #bd1b26);
+                }
+            }
+        }
+    }
+}
+.info-con.history.cmd{
+    height:79px;
+    border-bottom:1px solid #ddd;
+}
+
+.submenu.menuStyle li.li-3.disab
+{
+    color:#999;
+    background-color:#e4524c;
+}
+.submenu.menuStyle li.li-2.disab
+{
+    color:#999;
+    background-color:#f1f1f1;
+}
+

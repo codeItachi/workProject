@@ -1,0 +1,999 @@
+/*reset[[*/
+#app
+{
+  height:100%;
+}
+.pages-fade-transition
+{
+  height:100%;
+  overflow-y:auto;
+}
+html
+{
+  margin:0;
+  padding:0;
+  height:100%;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+body
+{
+  margin:0;
+  color:#666;
+  height:100%;
+  -webkit-user-select: none;
+  -webkit-touch-callout:none;
+  font-family: "Microsoft Yahei";
+}
+div,span,p,a,h1,h2,h3,input,textarea,ul,li,label
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+h1,h2,h3
+{
+  font-weight: normal;
+}
+input,
+button,
+select,
+textarea {
+  appearance:none;
+  -webkit-appearance:none;
+  font-family: "Microsoft Yahei";
+}
+a {
+  cursor: pointer;
+  outline: 0;
+  text-decoration:none;
+}
+ul li
+{
+  list-style:none;
+}
+/*reset]]*/
+
+.hide
+{
+  display:none;
+}
+.w-2
+{
+  width:20px;
+}
+.w-3
+{
+  width:30px
+}
+.w-4
+{
+  width:40px;
+}
+.w-5
+{
+  width:50px;
+}
+.w-6
+{
+  width:60px;
+}
+.w-7
+{
+  width:70px
+}
+.w-8
+{
+  width:80px;
+}
+.w-9
+{
+  width:90px;
+}
+.w-10
+{
+  width:100px;
+}
+.w-12
+{
+  width:120px;
+}
+.w-14
+{
+  width:140px;
+}
+.w-16
+{
+  width:160px;
+}
+.w-18
+{
+  width:180px;
+}
+.w-20
+{
+  width:200px;
+}
+.w-22
+{
+  width:220px;
+}
+.w-24
+{
+  width:240px;
+}
+.w-30
+{
+  width:300px;
+}
+
+/*input*/
+input[type=text]
+{
+  outline:0;
+}
+input::placeholder
+{
+  color:ccc;
+}
+.inline-con
+{
+  display:inline-block;
+  vertical-align:top;
+  position:relative;
+  line-height:26px;
+}
+.input-group
+{
+  position:relative;
+
+  >label
+  {
+    display:inline-block;
+    position:absolute;
+    width:80px;
+    color:#999;
+    font-size:15px;
+    line-height:34px;
+    padding-right:10px;
+  }
+
+  >div
+  {
+    display:inline-block;
+    vertical-align:top;
+
+    &.input-fit
+    {
+      width:100%;
+      height:34px;
+      line-height:34px;
+      padding-left:80px;
+    }
+  }
+}
+
+.input-item
+{
+  position:relative;
+  padding-left:88px;
+  padding-right:10px;
+  font-size:15px;
+
+  &.l5
+  {
+    padding-left:102px;
+
+    >label
+    {
+      width:102px;
+    }
+  }
+
+  >label
+  {
+    width:90px;
+    position:absolute;
+    top:0;
+    left:0;
+    color:#999;
+    height:34px;
+    padding-left:10px;
+    line-height:34px;
+  }
+
+  >div
+  {
+    line-height:34px;
+    min-height:34px;
+    position:relative;
+
+    &.radio
+    {
+      padding-top:7px;
+    }
+
+    >a
+    {
+      color:#666;
+
+      &.prompt
+      {
+        color:#999;
+      }
+    }
+
+    ul
+    {
+      position:absolute;
+      width:100%;
+      left:0;
+      z-index:990;
+      padding:5px 0;
+      border-radius:3px;
+      border:1px solid #ddd;
+      background-color:#fff;
+      -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+      li
+      {
+        line-height:28px;
+        padding:0 10px;
+
+        &:nth-child(1),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(7),
+        &:nth-child(9)
+        {
+          background-color:#f1f1f1;
+        }
+        &.active
+        {
+          color:#fff;
+          margin-left:-1px;
+          background-color:#028dea;
+        }
+      }
+
+      &:after
+      {
+        position:absolute;
+        display:block;
+        content:"";
+        width:8px;
+        height:8px;
+        border-top:1px solid #ccc;
+        border-left:1px solid #ccc;
+        background-color:#fff;
+      }
+
+      &.top
+      {
+        bottom:44px;
+        &:after
+        {
+          bottom:-5px;
+          left:20px;
+          transform:rotate(225deg);
+          -webkit-transform:rotate(225deg);
+        }
+      }
+      &.bot
+      {
+        top:45px;
+        &:after{
+          top:-5px;
+          left:20px;
+          transform:rotate(45deg);
+          -webkit-transform:rotate(45deg);
+        }
+      }
+    }
+  }
+
+  input
+  {
+    width:100%;
+    border:0;
+    outline:0;
+    padding:0;
+    line-height:34px;
+    color:#666;
+    font-size:15px;
+
+    &:disabled
+    {
+      background-color:#fff;
+    }
+  }
+
+  >input
+  {
+    height:34px;
+    border:0;
+    outline:0;
+    color:#666;
+    font-size:15px;
+    padding:8px 10px;
+    line-height:20px;
+  }
+
+  &.sm
+  {
+    padding-left:60px;
+    >label
+    {
+      width:60px;
+    }
+  }
+  &.lg
+  {
+    padding-left:110px;
+    >label
+    {
+      width:110px;
+    }
+  }
+}
+
+.unit-px,
+.unit-color,
+.unit-w,
+.unit-v,
+.unit-mm,
+.unit-cm,
+.unit-point
+{
+  &:after
+  {
+    position:absolute;
+    height:34px;
+    line-height:34px;
+    color:#ddd;
+    top:4px;
+    right:20px;
+  }
+
+  >div
+  {
+    padding-right:50px;
+  }
+}
+.unit-point
+{
+  &:after
+  {
+    content:"点";
+  }
+}
+.unit-px
+{
+  &:after
+  {
+    content:"像素";
+  }
+}
+.unit-color
+{
+  &:after
+  {
+    content:"万";
+  }
+}
+
+.unit-v
+{
+  &:after
+  {
+    content:"伏";
+  }
+}
+
+.unit-w
+{
+  &:after
+  {
+    content:"瓦";
+  }
+}
+.unit-mm
+{
+  &:after
+  {
+    content:"mm"
+  }
+}
+.unit-cm
+{
+  &:after
+  {
+    content:"cm"
+  }
+}
+
+.input-tab
+{
+  input
+  {
+    height:34px;
+    border:0;
+    color:#666;
+    font-size:15px;
+    padding:8px 10px;
+    line-height:20px;
+  }
+}
+/*input*/
+
+/*icon*/
+/*+*/
+.i-add
+{
+  display:inline-block;
+  vertical-align:top;
+  position:relative;
+  width:30px;
+  height:30px;
+  border-radius:2px;
+  border:1px solid #ddd;
+  background-color:#f1f1f1;
+  
+  &:active
+  {
+    background-color:#fafafa;
+  }
+  &:after
+  {
+    position:absolute;
+    display:block;
+    content:" ";
+    width:2px;
+    height:16px;
+    left:13px;
+    top:6px;
+    background-color:#bbb;
+  }
+  &:before
+  {
+    position:absolute;
+    display:block;
+    content:" ";
+    width:16px;
+    height:2px;
+    left:6px;
+    top:13px;
+    background-color:#bbb;
+  }
+}
+.i-add.addActive
+{
+  background-color:#fff;
+}
+/*-*/
+.i-sub
+{
+  display:inline-block;
+  vertical-align:top;
+  position:relative;
+  width:30px;
+  height:30px;
+  border-radius:2px;
+  border:1px solid #ddd;
+  background-color:#f1f1f1;
+
+  &:active
+  {
+    background-color:#fafafa;
+  }
+
+  &:after
+  {
+    position:absolute;
+    display:block;
+    content:" ";
+    width:16px;
+    height:2px;
+    left:6px;
+    top:13px;
+    background-color:#bbb;
+  }
+}
+.i-sub.subActive
+{
+  background-color:#fff;
+}
+.i-turn-r,
+.i-turn-l,
+.i-turn-t,
+.i-turn-b
+{
+  position:relative;
+  display:block;
+  min-width:30px;
+  min-height:30px;
+  padding-right:30px;
+
+  &:after
+  {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    top: 12px;
+    right: 12px;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+  }
+}
+.i-turn-r
+{
+  &:after
+  {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+}
+.i-turn-l
+{
+  &:after
+  {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}
+.i-turn-t
+{
+  &:after
+  {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+}
+.i-turn-b
+{
+  &:after
+  {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+  }
+}
+
+/*复选框[[*/
+.checkboxicon {
+  position: relative;
+  display: inline-block;
+  padding-left: 18px;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  vertical-align: top;
+}
+.checkboxicon i {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  outline: 0;
+  border-radius: 2px;
+  border: 1px solid #bebebe;
+  background-color: #e8e8e8;
+  box-sizing: border-box;
+  z-index:-1;
+}
+.checkboxicon input {
+  position: absolute;
+  left: -9999px;
+}
+.checkboxicon input + i:after,
+.checkboxicon input + i:before {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+}
+.checkboxicon input:checked + i:after,
+.checkboxicon input:checked + i:before {
+  opacity: 1;
+}
+.checkboxicon input + i:after {
+  top: -1px;
+  left: -1px;
+  content: "";
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid #3CA9E2;
+  box-sizing: border-box;
+}
+.checkboxicon input + i:before {
+  top: 0px;
+  left: 4px;
+  content: "";
+  width: 4px;
+  height: 8px;
+  position: absolute;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  z-index: 99;
+}
+.checkboxicon input:checked + i:after {
+  background-color: #42beff;
+}
+.cicon input + i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  background-color: #859ab0;
+}
+.cicon input:checked + i {
+  background-color: #f25e3d;
+}
+.checkboxicon.lg
+{
+    z-index:999;
+    padding-left:20px;
+
+    i
+    {
+        width:20px;
+        height:20px;
+        top:0;
+        border-radius:3px;
+    }
+    input + i:after
+    {
+        width:20px;
+        height:20px;
+        border-radius:3px;
+    }
+    input + i:before
+    {
+        top:1px;
+        left:5px;
+        width:5px;
+        height:9px;
+        border-right-width:2px;
+        border-bottom-width:2px;
+    }
+}
+/*复选框]]*/
+
+/*单选框*/
+.radioicon
+{
+  display:inline-block;
+  position: relative;
+  padding-left: 22px;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right:10px;
+  vertical-align: top;
+}
+.radioicon i
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  outline: 0;
+}
+
+.radioicon input
+{
+  position: absolute;
+  left: -9999px;
+}
+
+.radioicon input + i:after
+{
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+  -o-transition: opacity .2s;
+}
+.radioicon input:checked + i:after
+{
+  opacity: 1;
+}
+.radioicon i,
+.radioicon input + i:after {
+  border-radius: 50px;
+}
+.radioicon i {
+  background-color: #ffffff;
+  border: 1px solid #dfe2eb;
+}
+.radioicon input + i:after {
+  top: 3px;
+  left: 3px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #4dbeff;
+  opacity: 0;
+}
+.radioicon input:checked + i {
+  border-color: #4dbeff;
+}
+.radiobtn {
+  position: relative;
+  display: inline-block;
+  min-width: 66px;
+  height: 30px;
+  text-align: center;
+}
+.radiobtn i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 4px 5px;
+  border-radius: 50px;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transition: all .2s;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+}
+.radiobtn input {
+  position: absolute;
+  left: -9999px;
+}
+.radiobtn i {
+  border: 1px solid #4dbeff;
+  background-color: #ffffff;
+  color: #4dbeff;
+}
+.radiobtn input:checked + i {
+  border-color: #4dbeff;
+  background-color: #4dbeff;
+  color: #ffffff;
+}
+/*单选框*/
+
+/*动画 淡入淡出*/
+@keyframes fadeIn
+{
+  0%
+  {
+      opacity:0;
+  }
+  100%
+  {
+      opacity:1;
+  }
+}
+@keyframes fadeOut
+{
+  0%
+  {
+      opacity:1;
+  }
+  100%
+  {
+      opacity:0;
+  }
+}
+
+/*模态*/
+.modal.show
+{
+  display: block;
+
+  .modal-container
+  {
+    -webkit-animation:fadeIn 1s ease both;
+  }
+}
+
+.modal
+{
+  display:none;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  position:fixed;
+  z-index:99999;
+  background-color:rgba(0, 0, 0, 0.6);
+  
+  >div
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+
+  .modal-container
+  {
+    width:286px;
+    background-color:#fff;
+    border-radius:4px;
+    margin:0 auto;
+    z-index:99;
+  }
+
+  .modal-head
+  {
+    width:100%;
+    height:45px;
+    padding:0 24px;
+    line-height:44px;
+    border-bottom:1px solid #d9dfe4;
+    border-radius:4px 4px 0 0;
+
+    >span
+    {
+      display:block;
+      float:left;
+      height:44px;
+      line-height:44px;
+    }
+
+    &:after
+    {
+      content:"";
+      display:block;
+      clear:both;
+    }
+  }
+  .modal-body
+  {
+    max-height:360px;
+    background-color:#f2f2f2;
+  }
+  .modal-foot
+  {
+    padding:20px;
+    background-color:#f2f2f2;
+    border-radius:0 0 2px 2px;
+
+    >a
+    {
+      display:block;
+      width:100%;
+      height:34px;
+      line-height:34px;
+      color:#fff;
+      font-size:15px;
+      text-align:center;
+      border-radius:2px;
+      background-color:#44cb83;
+    }
+  }
+
+  &.prompt
+  {
+    .modal-head
+    {
+      background-color:#f2f2f2;
+    }
+    .modal-body
+    {
+      font-size:15px;
+      color: #ff6600;
+      padding: 10px 20px;
+      line-height:40px;
+      text-align: center;
+      border-top: 1px solid #fff;
+    }
+    .modal-foot
+    {
+      padding: 0 20px 20px 20px;
+      display: -webkit-box;
+
+      button
+      {
+        border: 0;
+        outline: 0;
+        -webkit-box-flex: 1;
+        height: 34px;
+        line-height: 32px;
+        text-align: center;
+        font-size: 16px;
+        display: block;
+        border-radius: 3px;
+
+        &.btn-danger {
+          color: #fff;
+          margin-right: 10px;
+          background-color: #FF4C4C;
+          border: 1px solid #dc1b1b;
+        }
+        &.btn-default {
+          color: #666;
+          margin-left: 10px;
+          background-color: #E8E8E8;
+          border: 1px solid #ddd;
+        }
+      }
+    }
+  }
+}
+
+/*swtich开关*/
+.swtichbtn {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  input 
+  {
+    position: absolute;
+    left: -9999px;
+  }
+
+  input + i,
+  input + i:before 
+  {
+    position: absolute;
+    display: inline-block;
+    border-radius: 50px;
+    font-style: normal;
+  }
+
+  input + i:before {
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  input + i {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e5e5e5;
+    -webkit-transition: background-color 0.3s ease-in;
+    transition: background-color 0.2s ease-in;
+  }
+
+  input + i:before {
+    left: 1px;
+    content:"";
+    color: #d5dae6;
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+  }
+
+  input:checked + i {
+    background-color: #4dd965;
+  }
+
+  input:checked + i:before {
+    left: 21px;
+    content:"";
+    color: #4dbeff;
+  }
+}

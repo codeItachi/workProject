@@ -1,0 +1,88 @@
+/**
+ *
+ * Main stylesheet for Powerange.
+ * http://abpetkov.github.io/powerange/
+ *
+ */
+
+/**
+ * Horizontal slider style (default).
+ */
+.vux-range-input-box{
+  position:relative;
+  padding: 10px 20px 50px;
+  .value{
+    display: block;
+    line-height: 20px;
+    width:100%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+.range-bar {
+  background-color: #999;
+  border-radius: 15px;
+  display: block;
+  height: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.range-bar-disabled {
+  opacity:1;
+}
+
+.range-quantity {
+  background-color: #00ff00;
+  border-radius: 15px;
+  display: block;
+  height: 100%;
+  width: 0;
+}
+
+.range-handle {
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: move;
+  height: 30px;
+  left: 0;
+  top: -13px;
+  position: absolute;
+  width: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.range-min,
+.range-max {
+  color: #181819;
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+}
+
+.range-min {
+  left: -30px;
+}
+
+.range-max {
+  right: -30px;
+}
+
+/**
+ * Style for disabling text selection on handle move.
+ */
+
+.unselectable {
+  user-select: none;
+}
+
+/**
+ * Style for handle cursor on disabled slider.
+ */
+
+.range-disabled {
+  cursor: default;
+}
